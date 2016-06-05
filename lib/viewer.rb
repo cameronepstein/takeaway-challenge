@@ -1,16 +1,23 @@
-#Menu viewer
+#Views a specified menu
 
 require_relative 'takeaways'
 
 class Viewer
 
-	# def initialize
-	# @order = [] 
-	 # end
-
 	def view(menu)
-	menu
+	@view_menu = menu
+	@view_menu
 	end
-
 end
+
+# class Order 
+
+# 	customers_order = []
+
+# 	def place_order(*number)
+# 		@view_menu
+# 		customers_order << 
+# end
+# end
+
 
