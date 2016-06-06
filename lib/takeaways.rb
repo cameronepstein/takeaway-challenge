@@ -1,6 +1,7 @@
 #Takeaway 
 
 require_relative 'menu'
+require_relative 'messenger'
 
 class Takeaway
 
@@ -26,9 +27,9 @@ class Takeaway
   	price
   end
 
-  def check_price(estimate)
+  def pay(estimate)
   	if estimate == price
-      "Correct Estimate"
+      Messenger.new.send
     else 
       fail "ERROR: ESTIMATED PRICE DOES NOT MATCH ORDER TOTAL"
     end
