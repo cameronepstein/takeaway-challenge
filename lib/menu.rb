@@ -1,3 +1,5 @@
+#SIMPLE MOCKUP OF RESTAURANT MENU
+
 module Menu
 
   PRICES = {

@@ -7,17 +7,25 @@ class Takeaway
 
   include Menu
 
+  #HOLDS A USERS ORDER
+
   def cart	
     @cart ||= Hash.new(0)
   end
+
+  #ALLOWS USER TO VIEW MENU
 
   def view_menu
 	PRICES #COULD ADD!.each_with_index {|(item, price), index| puts "#{index + 1} - #{item} : £#{price}"}
   end
 
+  #ALLOWS USER TO ADD MENU ITEMS TO CART
+
   def order(number)
   	  cart[PRICES.keys[number-1]] += 1
   end
+
+  #RETURNS TOTAL PRICE OF ORDER TO USER
 
   def price
   	price = 0
@@ -27,6 +35,8 @@ class Takeaway
   	price
   end
 
+  #ALLOWS USER TO ATTEMPT TO PAY WHAT THEY FEEL IS THE CORRECT TOTAL
+
   def pay(estimate)
   	if estimate == price
       Messenger.new.send
@@ -35,10 +45,4 @@ class Takeaway
     end
   end
 
-  # def order_checker
-  # 	until PRICES.keys.include? @item
-  # 	  puts "Item not included in menu, please try again"
-  # 	  @cart = gets.chomp
-  # 	end
-  # end
 end

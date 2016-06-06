@@ -1,3 +1,4 @@
+#USED TO SEND TEXT TO USER WITH ESTIMATED DELIVERY TIME 
 
 class Messenger
 
@@ -22,4 +23,3 @@ class Messenger
   end
 
 end
-
